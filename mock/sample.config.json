@@ -1,0 +1,16 @@
+{
+  "labels": [
+    {
+      "name": "Bug",
+      "replaces": ["bug", "fault"],
+      "color": "FF0000",
+      "description": "OMG this is a Bug!"
+    },
+    {
+      "name": "feature",
+      "replaces": [],
+      "color": "000000",
+      "description": "This is a feature!"
+    }
+  ]
+}

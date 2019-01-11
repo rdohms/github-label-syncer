@@ -1,0 +1,27 @@
+{
+  "name": "@rdohms/github-label-syncer",
+  "version": "0.1.0",
+  "description": "CLI Command that creates GitHub Labels from a set of configuration",
+  "main": "cli.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16",
+    "chalk": "^2.4.1",
+    "load-json-file": "^5.0.0",
+    "lodash": "^4.17.10",
+    "meow": "^5.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "posttest": "npm run lint",
+    "test": "jest"
+  }
+}
