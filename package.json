@@ -2,8 +2,10 @@
   "name": "@rdohms/github-label-syncer",
   "version": "0.1.0",
   "description": "CLI Command that creates GitHub Labels from a set of configuration",
+  "keywords": ["github", "labels", "syncer"],
   "main": "cli.js",
   "license": "MIT",
+  "repository": "github:rdohms/github-label-syncer",
   "devDependencies": {
     "eslint": "^5.12.0",
     "eslint-config-prettier": "^3.3.0",
@@ -18,6 +20,7 @@
     "lodash": "^4.17.10",
     "meow": "^5.0.0"
   },
+  "bin": { "github-label-syncer": "./cli.js"},
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
