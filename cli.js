@@ -5,36 +5,22 @@ const meow = require('meow');
 const chalk = require('chalk');
 const loadJsonFile = require('load-json-file');
 const path = require('path');
-const Octokit = require('@octokit/rest');
-const LabelSyncer = require('./src/label-syncer');
-const repositoryParser = require('./src/model/repository');
-const labels = require('./src/model/labels');
-
-const github = new Octokit({
-  timeout: 0,
-  headers: {
-    'user-agent': '@rdohms/github-label-syncer',
-    accept: 'application/vnd.github.symmetra-preview+json',
-  },
-});
+const GithubLabelSyncer = require('./github-label-syncer');
 
 async function run() {
   try {
+    const labelConfiguration = await loadJsonFile(
+      path.normalize(cli.flags.config)
+    );
     const [repository] = cli.input;
-    const [owner, repo] = repositoryParser.parse(repository);
-    const options = {
-      dryRun: cli.flags.dryrun,
-      token: cli.flags.token,
-      config: cli.flags.config,
-    };
 
-    const json = await loadJsonFile(path.normalize(options.config));
-    const syncer = new LabelSyncer({
-      ...options,
-      ...{ owner, repo, github },
-    });
-
-    const operations = await syncer.sync(labels.build(json.labels));
+    const syncer = new GithubLabelSyncer();
+    const operations = await syncer.run(
+      repository,
+      cli.flags.token,
+      labelConfiguration,
+      cli.flags.dryrun
+    );
 
     if (!cli.flags.dryrun) {
       console.log(
@@ -68,7 +54,7 @@ async function run() {
 const cli = meow(
   `
 Usage
-    $ sync-labels -t <token> -c <config> <repository>
+    $ github-label-syncer -t <token> -c <config> <repository>
 
     Options
       -d           Dry run, don't actually copy anything
@@ -76,7 +62,7 @@ Usage
       -c, --config Configuration file that holds desired labels
 
     Examples
-      $ sync-labels -t token -c labels.json rdohms/label-manager
+      $ github-label-syncer -t token -c labels.json rdohms/label-manager
 `,
   {
     flags: {
@@ -97,11 +83,7 @@ Usage
   }
 );
 
-if (!cli.flags.token) {
-  cli.showHelp(1);
-}
-
-if (cli.input.length < 1) {
+if (!cli.flags.token || cli.input.length < 1) {
   cli.showHelp(1);
 }
 
