@@ -4,13 +4,27 @@ The goal of this project is to make it simple for a standard set of labels to be
 
 # Usage
 
-This library is run from the command line, with a few parameters and a configuration file.
+## CLI
+This library can be run from the command line, with a few parameters and a configuration file.
 
 To see detailed instructions run:
 `$ ./cli.js -h`
 
 Example off a call:
 `$ ./cli.js -t XXXX -c mock/sample.config.json rdohms/my-repo`
+
+## Via code
+
+```js
+const GithubLabelSyncer = require('./github-label-syncer');
+const syncer = new GithubLabelSyncer();
+const operations = syncer.run(
+      repository,
+      token,
+      labelConfiguration,
+      dryRun
+    );
+```
 
 # Configuration
 

@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "CLI Command that creates GitHub Labels from a set of configuration",
   "keywords": ["github", "labels", "syncer"],
-  "main": "cli.js",
+  "main": "github-label-syncer.js",
   "license": "MIT",
   "repository": "github:rdohms/github-label-syncer",
   "devDependencies": {
