@@ -1,6 +1,6 @@
 {
   "name": "@rdohms/github-label-syncer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "CLI Command that creates GitHub Labels from a set of configuration",
   "keywords": ["github", "labels", "syncer"],
   "main": "github-label-syncer.js",
