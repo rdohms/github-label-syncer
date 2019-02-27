@@ -152,9 +152,9 @@
     universal-user-agent "^2.0.1"
 
 "@octokit/rest@^16":
-  version "16.13.2"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.13.2.tgz#03fa8a636f17de2f4a54b0b139607b28e16f77d3"
-  integrity sha512-rc0hdxm87PuY7i004Sp1qbxDWEDNX31wVTS4wLi3yMsxabPI19Rz45XmOkvv+/TKfUlXRUx72evwPTja+W+jGg==
+  version "16.16.1"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.16.1.tgz#65bc0a655c100fbe221da8dfc7fcd1e0f659f71e"
+  integrity sha512-CyHnB0+4qlRj1bRNJdivjGrceyYVRVdKsedeaw7OCZDW7EME2E5au+DZGiXtZUj59U3yxpcBsqzwm1h4nOA/rA==
   dependencies:
     "@octokit/request" "2.3.0"
     before-after-hook "^1.2.0"
