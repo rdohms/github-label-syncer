@@ -16,7 +16,7 @@
   "dependencies": {
     "@octokit/rest": "^16",
     "chalk": "^2.4.2",
-    "load-json-file": "^5.0.0",
+    "load-json-file": "^6.1.0",
     "lodash": "^4.17.10",
     "meow": "^5.0.0"
   },
