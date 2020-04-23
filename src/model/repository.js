@@ -1,4 +1,4 @@
-module.exports.parse = function(repository) {
+module.exports.parse = function (repository) {
   if (typeof repository !== 'string') {
     throw new Error('repository is not a string');
   }

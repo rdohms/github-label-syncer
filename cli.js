@@ -33,15 +33,15 @@ async function run() {
     }
 
     console.log(
-      chalk.green(`Created: ${operations.create.map(label => label.name)}`)
+      chalk.green(`Created: ${operations.create.map((label) => label.name)}`)
     );
     console.log(
-      chalk.green(`Deleted: ${operations.delete.map(label => label.name)}`)
+      chalk.green(`Deleted: ${operations.delete.map((label) => label.name)}`)
     );
     console.log(
       chalk.green(
         `Updated: ${operations.replace.map(
-          label => `${label.oldLabel.name} => ${label.newLabel.name}`
+          (label) => `${label.oldLabel.name} => ${label.newLabel.name}`
         )}`
       )
     );

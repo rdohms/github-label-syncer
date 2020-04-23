@@ -1,20 +1,20 @@
 const _ = require('lodash');
 const Label = require('./label');
 
-module.exports.build = function(labels) {
-  return labels.map(label => new Label(label));
+module.exports.build = function (labels) {
+  return labels.map((label) => new Label(label));
 };
 
-module.exports.compare = function(currentLabels, futureLabels) {
+module.exports.compare = function (currentLabels, futureLabels) {
   let toCreate = _.differenceBy(futureLabels, currentLabels, 'name');
   let toDelete = _.differenceBy(currentLabels, futureLabels, 'name');
 
   const toUpdate = [];
 
-  futureLabels.forEach(newLabel => {
+  futureLabels.forEach((newLabel) => {
     const matching = _.filter(currentLabels, ['name', newLabel.name]);
 
-    matching.forEach(matchingLabel => {
+    matching.forEach((matchingLabel) => {
       if (matchingLabel.hash() !== newLabel.hash()) {
         toUpdate.push({
           oldLabel: matchingLabel,
@@ -27,7 +27,7 @@ module.exports.compare = function(currentLabels, futureLabels) {
       return;
     }
 
-    const toReplace = _.filter(currentLabels, existingLabel =>
+    const toReplace = _.filter(currentLabels, (existingLabel) =>
       newLabel.shouldReplace(existingLabel)
     );
 

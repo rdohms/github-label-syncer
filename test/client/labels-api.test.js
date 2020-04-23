@@ -66,7 +66,7 @@ describe('LabelsApi', () => {
   });
 
   describe('update', () => {
-    it('updates each label correctly', done => {
+    it('updates each label correctly', (done) => {
       ghMock.issues.updateLabel.mockReturnValue({ success: true });
       const operations = [
         {
@@ -105,7 +105,7 @@ describe('LabelsApi', () => {
   });
 
   describe('create', () => {
-    it('creates all labels passed to it', done => {
+    it('creates all labels passed to it', (done) => {
       const incomingLabels = [
         {
           name: 'foo',
@@ -143,7 +143,7 @@ describe('LabelsApi', () => {
   });
 
   describe('delete', () => {
-    it('deletes all labels passed to it', done => {
+    it('deletes all labels passed to it', (done) => {
       const labelsToDelete = [
         {
           name: 'foo',

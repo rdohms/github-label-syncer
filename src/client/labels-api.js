@@ -32,7 +32,7 @@ class LabelsApi {
    */
   async update(operations) {
     await Promise.all(
-      operations.map(operation => {
+      operations.map((operation) => {
         this.github.issues.updateLabel({
           owner: this.owner,
           repo: this.repo,
@@ -51,7 +51,7 @@ class LabelsApi {
    */
   async create(labels) {
     await Promise.all(
-      labels.map(label => {
+      labels.map((label) => {
         this.github.issues.createLabel({
           owner: this.owner,
           repo: this.repo,
@@ -69,7 +69,7 @@ class LabelsApi {
    */
   async delete(labels) {
     await Promise.all(
-      labels.map(label => {
+      labels.map((label) => {
         this.github.issues.deleteLabel({
           owner: this.owner,
           repo: this.repo,
