@@ -5,14 +5,10 @@ class LabelsApi {
    * @param {Object} options
    */
   constructor(opts) {
-    this.github = opts.github;
     this.owner = opts.owner;
     this.repo = opts.repo;
 
-    this.github.authenticate({
-      type: 'oauth',
-      token: opts.token,
-    });
+    this.github = opts.githubConstructor(opts.token);
   }
 
   async getLabels() {
