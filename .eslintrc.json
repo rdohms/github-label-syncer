@@ -17,7 +17,6 @@
   "rules": {
     "quotes": ["error", "single"],
     "prettier/prettier": "error",
-    "arrow-parens": ["error", "as-needed"],
     "comma-dangle": [
       "error",
       {
@@ -34,7 +33,7 @@
     "space-before-function-paren": [
       "error",
       {
-        "anonymous": "never",
+        "anonymous": "always",
         "named": "never",
         "asyncArrow": "always"
       }
