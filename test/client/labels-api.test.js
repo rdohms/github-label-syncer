@@ -24,7 +24,7 @@ describe('LabelsApi', () => {
 
   beforeEach(() => {
     options = {
-      github: ghMock,
+      githubConstructor: () => ghMock,
       owner: 'rdohms',
       repo: 'Test',
     };
