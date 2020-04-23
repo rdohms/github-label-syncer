@@ -26,5 +26,9 @@
     "lint:fix": "eslint . --fix",
     "posttest": "npm run lint",
     "test": "jest"
+  },
+  "resolutions": {
+    "set-value": "^2.0.1",
+    "kind-of": "6.0.3"
   }
 }
