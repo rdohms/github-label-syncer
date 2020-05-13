@@ -18,7 +18,7 @@
     "chalk": "^4.0.0",
     "load-json-file": "^6.1.0",
     "lodash": "^4.17.10",
-    "meow": "^5.0.0"
+    "meow": "^7.0.1"
   },
   "bin": { "github-label-syncer": "./cli.js"},
   "scripts": {
