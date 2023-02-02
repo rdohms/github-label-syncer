@@ -2,25 +2,32 @@
   "name": "@rdohms/github-label-syncer",
   "version": "0.2.1",
   "description": "CLI Command that creates GitHub Labels from a set of configuration",
-  "keywords": ["github", "labels", "syncer"],
+  "keywords": [
+    "github",
+    "labels",
+    "syncer"
+  ],
   "main": "github-label-syncer.js",
   "license": "MIT",
   "repository": "github:rdohms/github-label-syncer",
   "devDependencies": {
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "jest": "^26.4.2",
+    "eslint": "^8",
+    "eslint-config-prettier": "^8",
+    "eslint-plugin-prettier": "^4",
+    "jest": "^29",
     "prettier": "^2.0.5"
   },
   "dependencies": {
-    "@octokit/rest": "^17",
-    "chalk": "^4.0.0",
-    "load-json-file": "^6.1.0",
+    "@octokit/rest": "^19",
+    "chalk": "^5.2.0",
+    "load-json-file": "^7",
     "lodash": "^4.17.10",
-    "meow": "^7.1.1"
+    "meow": "^11",
+    "set-value": "^4"
   },
-  "bin": { "github-label-syncer": "./cli.js"},
+  "bin": {
+    "github-label-syncer": "./cli.js"
+  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
