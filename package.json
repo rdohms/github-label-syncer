@@ -22,7 +22,7 @@
     "chalk": "^5.2.0",
     "load-json-file": "^7",
     "lodash": "^4.17.10",
-    "meow": "^11",
+    "meow": "^12",
     "set-value": "^4"
   },
   "bin": {
