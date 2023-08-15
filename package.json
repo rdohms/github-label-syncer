@@ -12,7 +12,7 @@
   "repository": "github:rdohms/github-label-syncer",
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-prettier": "^8",
+    "eslint-config-prettier": "^9",
     "eslint-plugin-prettier": "^5",
     "jest": "^29",
     "prettier": "^3.0.1"
