@@ -18,7 +18,7 @@
     "prettier": "^3.0.1"
   },
   "dependencies": {
-    "@octokit/rest": "^19",
+    "@octokit/rest": "^20",
     "chalk": "^5.2.0",
     "load-json-file": "^7",
     "lodash": "^4.17.10",
